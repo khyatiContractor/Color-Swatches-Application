@@ -13,13 +13,13 @@
 
 
 <div class="flex-container" >
-    <div class="card color-list-class" 
+    <div class="card color-list-class"
     *ngFor='let color of filtercolors | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize'
     [routerLink]="['/colors',color.colorId]">
-        
+
             <div class="card-img-top" [style.background]="color.hexString">
             </div>
-            
+
             <div class="card-body">
                   <h4 class="card-title">{{color.hexString}}</h4>
             </div>
@@ -28,7 +28,7 @@
 </div>
 
 <ngb-pagination
-      class = "pagination"
+      class = "pagination flex-container"
       [(page)]="page"
       [pageSize]="pageSize"
       [collectionSize]=100

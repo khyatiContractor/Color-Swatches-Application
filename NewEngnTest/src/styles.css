@@ -3,6 +3,8 @@
 *{
   font-family: 'Source Serif Pro', serif;
 }
+
+
 .sidenav {
   height: 100%;
   width: 250px;
@@ -52,35 +54,59 @@
 }
 .color-detail{
   width:100%;
-  height:300px; 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
-  border-radius: 10px; 
+  height:300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
   margin:20px;
 }
 .color-detail .card-header{
-  width: 100%; 
-  height: 250px;  
+  width: 100%;
+  height: 250px;
   border-radius: 10px;
 }
 
  .color-shades{
-  width:200px; 
+  width:200px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 10px; 
+  border-radius: 10px;
   margin:20px;
 }
 .color-shades .card-title{
-  width: 100%; 
-  height: 100px;  
+  width: 100%;
+  height: 100px;
   border-radius: 10px;
 }
 .color-list-class{
-  width:200px; 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  width:200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   margin:20px;
 }
 .color-list-class .card-img-top{
-  height: 150px;  
+  height: 150px;
   border-radius: 10px;
+}
+
+@media only screen and (max-width: 450px) {
+  *{
+    font-size: 1rem !important;
+  }
+  .sidenav {
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  .flex-container{
+    margin-top: 250px;
+    margin-left: 0;
+  }
+  .navbar{
+    top:0;
+  }
+  .pagination{
+    margin-left: 0px;
+    position: relative;
+  }
 }

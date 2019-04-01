@@ -1,0 +1,37 @@
+<div class="sidenav">
+    <a  [routerLink]="['/colors','9']">Red</a>
+    <a [routerLink]="['/colors','2']">Green</a>
+    <a [routerLink]="['/colors','12']">Blue</a>
+    <a [routerLink]="['/colors','11']">Yellow</a>
+    <a [routerLink]="['/colors','16']">Black</a>
+    <div class="form-group">
+        <label for="usr">Search:</label>
+        <input type="text" class="form-control" id="usr"
+              [(ngModel)]='listcolors'>
+      </div>
+  </div>
+
+
+<div class="flex-container" >
+    <div class="card color-list-class" 
+    *ngFor='let color of filtercolors | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize'
+    [routerLink]="['/colors',color.colorId]">
+        
+            <div class="card-img-top" [style.background]="color.hexString">
+            </div>
+            
+            <div class="card-body">
+                  <h4 class="card-title">{{color.hexString}}</h4>
+            </div>
+      </div>
+  <br>
+</div>
+
+<ngb-pagination
+      class = "pagination"
+      [(page)]="page"
+      [pageSize]="pageSize"
+      [collectionSize]=100
+      [directionLinks]="false">
+    </ngb-pagination>
+

@@ -1,0 +1,38 @@
+<div class="sidenav">
+    <a (click)="colorD('9')">Red</a>
+    <a (click)="colorD('2')">Green</a>
+    <a (click)="colorD('12')">Blue</a>
+    <a (click)="colorD('11')">Yellow</a>
+    <a (click)="colorD('16')">Black</a>
+  </div>
+
+<div  class="flex-container" *ngIf='color' >
+<div class='card color-detail'>
+      <div class='card-header'  
+      [style.background]="color.hexString" 
+      [style.opacity]="opacity">
+      </div>
+        <h4>{{color.hexString}}</h4>
+</div>
+
+<div class="card color-shades "  
+          *ngFor='let col of hsl;' 
+          (click)="myClickFunction(col)">
+          
+          <div class="card-title" 
+           [style.background]="color.hexString" 
+           [style.opacity]="col">
+          </div>
+          <h4>{{color.hexString}}</h4>
+        <br>
+</div>
+
+<div class='card-footer' style='width:100%; padding: 5%;'>
+    <button class='btn btn-outline-secondary'
+            (click)='onBack()'
+            style='width:80px'>
+       Clear
+    </button>
+  </div>
+</div>
+
